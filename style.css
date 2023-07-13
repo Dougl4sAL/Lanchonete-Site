@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color:  var(--white-cor);
+    font-family: Helvetica;
+    box-sizing: border-box;
+    /* Para os filhos nao ultrapassarem o tamanho do pai */
+}
+
+:root{
+    --white-cor   : #f2f2f2;
+    --red-color   : #F21D2F;
+    --orange-color: #F2600C;
+    --grey-color  : #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white-cor);
+    padding: 15px;
+    font-weight: bold;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+  
+.logo {
+    font-weight: bold;
+    margin-right: 20px;
+    margin-left: 100px;
+    background-color: var(--red-color);
+    color: var(--white-cor);
+}
+  
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+  
+.menu-items {
+    display: flex;
+    align-items: center;
+}
+  
+.menu-items li {
+    list-style: none;
+    margin-right: 30px;
+}
+  
+.menu-items li a {
+    text-decoration: none;
+    color: #333;
+}
+  
+.carrinho {
+    margin-left: 50px;
+    margin-right: 100px;
+    color: var(--red-color);
+}
+
+.banner {
+width: 100%;
+max-width: 100%;
+}
+
+.banner img {
+width: 100%;
+height: auto;
+}
+
+.explore-menu{
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 45px;
+    font-size: 20px;
+}
+
+.explore-menu span{
+    color: var(--red-color);
+}
+
+.tudo-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.card-produto {
+    width: 25%;
+    margin-top: 70px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+  
+.card-produto img {
+    mix-blend-mode: multiply; /*Remove o fundo das fotos*/
+    width: 50%;
+    height: auto;
+}
+  
