@@ -88,18 +88,31 @@ height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+    text-align: center;
 }
   
 .card-produto {
     width: 25%;
-    margin-top: 70px;
     padding: 10px;
     box-sizing: border-box;
 }
   
 .card-produto img {
-    mix-blend-mode: multiply; /*Remove o fundo das fotos*/
-    width: 50%;
+    width: 60%;
     height: auto;
+    mix-blend-mode: multiply;
+    display: block;
+    margin: 0 auto; /*Alinha tudo ao centro junto com o block*/
 }
   
+.tudo-card .nome-produto{
+    color: var(--orange-color);
+    font-weight: bolder;
+}
+
+.tudo-card .desc-produto{
+    text-align: justify;
+    font-size: 12px;
+}
