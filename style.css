@@ -1,14 +1,14 @@
 * {
     margin: 0;
     padding: 0;
-    background-color:  var(--white-cor);
-    font-family: Helvetica;
+    background-color: #f7f5f5;
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     /* Para os filhos nao ultrapassarem o tamanho do pai */
 }
 
 :root{
-    --white-cor   : #f2f2f2;
+    --white-cor   : #e8e8e8;
     --red-color   : #F21D2F;
     --orange-color: #F2600C;
     --grey-color  : #333;
@@ -88,31 +88,50 @@ height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     margin-top: 50px;
-    text-align: center;
+    /* text-align: center; */
 }
   
 .card-produto {
-    width: 25%;
+    background-color: var(--white-cor);
+    border-radius: 20px;
+
+    width: 30%;
+    margin: 3px;
     padding: 10px;
     box-sizing: border-box;
-}
-  
-.card-produto img {
-    width: 60%;
-    height: auto;
-    mix-blend-mode: multiply;
-    display: block;
-    margin: 0 auto; /*Alinha tudo ao centro junto com o block*/
-}
-  
-.tudo-card .nome-produto{
-    color: var(--orange-color);
-    font-weight: bolder;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.tudo-card .desc-produto{
-    text-align: justify;
-    font-size: 12px;
+.card-produto img {
+    margin-top: 10px;
+    width: 140px;
+    height: auto;
+    mix-blend-mode: multiply;  /*Remove o fundo da img*/
+}
+  
+.nome-produto{
+    color: var(--orange-color);
+    font-weight: bolder;
+    text-align: center;
+}
+
+.desc-produto{
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.opcoes-produto{
+    margin-top: 20px;
+
+}
+
+.opcoes-produto button{
+    border: none;
+    margin: 0px 8px;
 }
