@@ -7,14 +7,20 @@
 }
 
 :root{
-    --white-cor   : #e8e8e8;
-    --red-color   : #F21D2F;
-    --orange-color: #F2600C;
-    --grey-color  : #333;
+    --white-color   : #f2f2f2;
+    --l-white-color : #e8e8e8;
+    --red-color     : #F21D2F;
+    --orange-color  : #F2600C;
+    --grey-color    : #333;
 }
 
 body {
-    background-color: #f2f2f2;
+    background-color: var(--white-color);
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
 }
 
 .explore-menu{
@@ -39,10 +45,10 @@ body {
 
   
 .card-produto {
-    background-color: var(--white-cor);
+    background-color: var(--l-white-color);
     border-radius: 20px;
 
-    width: 200px;
+    width: 210px;
     margin: 3px;
     padding: 10px;
     box-sizing: border-box;
@@ -52,16 +58,18 @@ body {
     text-align: center;
 }
 
+
 .card-produto img {
     width: 140px;
     margin: auto;
     height: auto;
     mix-blend-mode: multiply;  /*Remove o fundo da img*/
 }
-  
+
 .nome-produto{
     color: var(--orange-color);
     font-weight: bolder;
+    margin-top: 10px;
 }
 
 .desc-produto{
@@ -74,20 +82,39 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* Quantidade, valor e carriho lado a lado com espaçamento */
 }
 
+.quantidade-produto {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 6px 0px;
+    /* Deixa a cor mais alta pra ficar largo */
+}
+
+.adicionar-produto i {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 6px 8px;
+    /* Deixa a cor mais alta pra ficar largo */
+    cursor: pointer;
+}
 .quantidade-produto span {
     color: var(--orange-color);
-    font-weight: bold;
+    font-weight: bolder;
 }
 .quantidade-produto button{
+    background-color: transparent;
+    color: var(--grey-color);
+    
     cursor: pointer;
-    background-color: var(--white-cor);
     border: none;
-    margin: 0px 7px;
+    margin: 0px 9px;
     font-weight: bolder;
 }
 
-.adicionar-produto {
-    cursor: pointer;
+.valor-produto {
+    color: var(--red-color);
+    font-weight: bolder;
+    font-size: small;
 }
