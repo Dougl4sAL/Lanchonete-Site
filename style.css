@@ -124,3 +124,40 @@ body {
     font-weight: bolder;
     font-size: small;
 }
+
+/* ============================================================== */
+
+.compras {
+    margin-top: 25px;
+}
+
+.lista-pedido p {
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.lista-pedido span {
+    color: var(--red-color);
+}
+
+.lista-compras {
+    margin: 25px 0px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+table {
+    flex: 1;
+}
+
+table i{
+    cursor: pointer;
+    color: var(--red-color);
+}
+
+td {
+    padding: 12px 0px;
+}
