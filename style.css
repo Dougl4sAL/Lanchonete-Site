@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: #f7f5f5;
     font-family: Helvetica;
     box-sizing: border-box;
     /* Para os filhos nao ultrapassarem o tamanho do pai */
@@ -14,62 +13,8 @@
     --grey-color  : #333;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--white-cor);
-    padding: 15px;
-    font-weight: bold;
-}
-
-.navbar-left {
-    display: flex;
-    align-items: center;
-}
-  
-.logo {
-    font-weight: bold;
-    margin-right: 20px;
-    margin-left: 100px;
-    background-color: var(--red-color);
-    color: var(--white-cor);
-}
-  
-.navbar-right {
-    display: flex;
-    align-items: center;
-}
-  
-.menu-items {
-    display: flex;
-    align-items: center;
-}
-  
-.menu-items li {
-    list-style: none;
-    margin-right: 30px;
-}
-  
-.menu-items li a {
-    text-decoration: none;
-    color: #333;
-}
-  
-.carrinho {
-    margin-left: 50px;
-    margin-right: 100px;
-    color: var(--red-color);
-}
-
-.banner {
-width: 100%;
-max-width: 100%;
-}
-
-.banner img {
-width: 100%;
-height: auto;
+body {
+    background-color: #f2f2f2;
 }
 
 .explore-menu{
@@ -88,28 +33,28 @@ height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* align-items: flex-start; */
-    margin-top: 50px;
-    /* text-align: center; */
+    align-content: center; /* Adicione esta linha */
+    margin-top: 20px;
 }
+
   
 .card-produto {
     background-color: var(--white-cor);
     border-radius: 20px;
 
-    width: 30%;
+    width: 200px;
     margin: 3px;
     padding: 10px;
     box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
 }
 
 .card-produto img {
-    margin-top: 10px;
     width: 140px;
+    margin: auto;
     height: auto;
     mix-blend-mode: multiply;  /*Remove o fundo da img*/
 }
@@ -117,21 +62,32 @@ height: auto;
 .nome-produto{
     color: var(--orange-color);
     font-weight: bolder;
-    text-align: center;
 }
 
 .desc-produto{
-    text-align: center;
     font-size: 13px;
     margin-top: 10px;
 }
 
 .opcoes-produto{
-    margin-top: 20px;
-
+    margin: 15px 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.opcoes-produto button{
+.quantidade-produto span {
+    color: var(--orange-color);
+    font-weight: bold;
+}
+.quantidade-produto button{
+    cursor: pointer;
+    background-color: var(--white-cor);
     border: none;
-    margin: 0px 8px;
+    margin: 0px 7px;
+    font-weight: bolder;
+}
+
+.adicionar-produto {
+    cursor: pointer;
 }
