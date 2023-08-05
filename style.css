@@ -7,19 +7,37 @@
 }
 
 :root{
-    --white-color   : #f2f2f2;
-    --l-white-color : #e8e8e8;
-    --red-color     : #F21D2F;
-    --orange-color  : #F2600C;
-    --grey-color    : #333;
+    --background-color: #ffffff;
+    --white-color     : #e8e8e8;
+    --red-color       : #F21D2F;
+    --orange-color    : #F2600C;
+    --grey-color      : #333;
 }
 
 body {
-    background-color: var(--white-color);
+    background-color: var(--background-color);
 }
 
-.container {
+header {
+    display: flex;
+    align-items: center; /* Para centralizar verticalmente os itens */
+    padding: 20px 30px;
+}
+
+ul {
+    list-style: none;
+    display: flex; 
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0px 20px 0px;
+}
+
+.container-cards {
     max-width: 650px;
+    /* max-width: 1076px */
     margin: auto;
 }
 
@@ -45,7 +63,7 @@ body {
 
   
 .card-produto {
-    background-color: var(--l-white-color);
+    background-color: var(--white-color);
     border-radius: 20px;
 
     width: 210px;
@@ -86,7 +104,7 @@ body {
 }
 
 .quantidade-produto {
-    background-color: var(--white-color);
+    background-color: var(--background-color);
     border-radius: 10px;
 }
 
@@ -107,7 +125,7 @@ body {
 }
 
 .adicionar-produto i {
-    background-color: var(--white-color);
+    background-color: var(--background-color);
     border-radius: 10px;
     padding: 6px 8px;
     /* Deixa a cor mais alta pra ficar largo */
