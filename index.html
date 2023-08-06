@@ -23,201 +23,190 @@
                     <li>Restaurantes</li>
                     <li>Mercados</li>
                     <li>Bebidas</li>
+                    <li>Farmácias</li>
                 </ul>
             </nav>
-            <input type="search" name="search-input" id="search-input">
-            <div class="botoes-acoes">
-                <!-- tag a tem o icone em svg de entrar na conta -->
-                <a href="#"> 
-                    <span class="icon-marmita icon-marmita--sign-in btn__icon"><svg width="24px" height="30px"
-                            viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g transform="translate(-528.000000, -528.000000)">
-                                    <g id="Entrar" transform="translate(528.000000, 528.000000)">
-                                        <path
-                                            d="M9.5,23 L27.5,23 C28.3284271,23 29,23.6715729 29,24.5 C29,25.3284271 28.3284271,26 27.5,26 L9.5,26 C8.67157288,26 8,25.3284271 8,24.5 C8,23.6715729 8.67157288,23 9.5,23 Z M17.5,3 L19,3 C19.8284271,3 20.5,3.67157288 20.5,4.5 C20.5,5.32842712 19.8284271,6 19,6 L17.5,6 C16.6715729,6 16,5.32842712 16,4.5 C16,3.67157288 16.6715729,3 17.5,3 Z M17.5,42 L19,42 C19.8284271,42 20.5,42.6715729 20.5,43.5 C20.5,44.3284271 19.8284271,45 19,45 L17.5,45 C16.6715729,45 16,44.3284271 16,43.5 C16,42.6715729 16.6715729,42 17.5,42 Z"
-                                            id="Shape" fill="#3F3E3E" fill-rule="nonzero"></path>
-                                        <path
-                                            d="M18.5,43.5 L33.46,43.5 C37.0498509,43.5 39.96,40.5898509 39.96,37 L39.96,11 C39.96,9.27609282 39.2751805,7.62279238 38.0561941,6.40380592 C36.8372076,5.18481946 35.1839072,4.5 33.46,4.5 L18.4916467,4.5"
-                                            id="Shape" stroke="#3F3E3E" stroke-width="3"></path>
-                                        <polyline id="Shape" stroke="#3F3E3E" stroke-width="3" stroke-linecap="round"
-                                            points="22 16 29 24.5 22 33"></polyline>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg></span>
-                </a>
-
-                
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" name="search-input" id="search-input" placeholder="Busque por item ou loja">
+            </div>
+            <div class="header-carrinho">
+                <button class="carrinho-sacola">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <p>
+                        <span>R$ 0,00</span>
+                        <span>0 itens</span>
+                    </p>
+                </button>
             </div>
         </header>
     </div>
-    <div class="container-cards">
 
-        <div class="explore-menu">
-            <p>Explore o <span>Menu</span></p>
+    <div class="main-layout">
+
+        <div class="margin-top"></div>
+
+        <div class="carousel-container">
+                <img src="Imagens/Foto banner/banner-1.png" alt="">
+                <img src="Imagens/Foto banner/banner-2.png" alt="">
         </div>
 
-        <div class="tudo-card">
+        <div class="container-cards">
 
-            <div class="card-produto">
-                <img src="Imagens/Fotos Hamburguer/lanche-1.png" alt="foto-hamburguer">
-                <p class="nome-produto">Dublo X-Burguer</p>
-                <p class="desc-produto">Pão, 2 hamburguers, 2 queijos, alface, tomate, milho e molho</p>
-                <div class="opcoes-produto">
-                    <div class="quantidade-produto">
-                        <button class="menos-produto">-</button>
-                        <span class="quantidade">0</span>
-                        <button class="mais-produto">+</button>
-                    </div>
-                    <div class="adicionar-produto">
-                        <span class="valor-produto">R$16</span>
-                        <button class="carrinho">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                    </div>
-                </div>
 
+            <div class="explore-menu">
+                <p>Explore o <span>Menu</span></p>
             </div>
 
-            <div class="card-produto">
-                <img src="Imagens/Fotos Hamburguer/lanche-2.png" alt="foto-hamburguer">
-                <p class="nome-produto">Mega Burguer</p>
-                <p class="desc-produto">Pão triplo, 2 hamburguers, queijo, alface e molho da casa</p>
-                <div class="opcoes-produto">
-                    <div class="quantidade-produto">
-                        <button class="menos-produto">-</button>
-                        <span class="quantidade">0</span>
-                        <button class="mais-produto">+</button>
+            <div class="tudo-card">
+
+                <div class="card-produto">
+                    <img src="Imagens/Fotos Hamburguer/lanche-1.png" alt="foto-hamburguer">
+                    <p class="nome-produto">Dublo X-Burguer</p>
+                    <p class="desc-produto">Pão, 2 hamburguers, 2 queijos, alface, tomate, milho e molho</p>
+                    <div class="opcoes-produto">
+                        <div class="quantidade-produto">
+                            <button class="menos-produto">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                            <span class="quantidade">0</span>
+                            <button class="mais-produto">
+                                <i class="fa-solid fa-angle-up"></i>
+                            </button>
+                        </div>
+                        <div class="adicionar-produto">
+                            <span class="valor-produto">R$16</span>
+                            <button class="carrinho">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="adicionar-produto">
-                        <span class="valor-produto">R$22</span>
-                        <button class="carrinho">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                    </div>
+
                 </div>
 
-            </div>
+                <div class="card-produto">
+                    <img src="Imagens/Fotos Hamburguer/lanche-2.png" alt="foto-hamburguer">
+                    <p class="nome-produto">Mega Burguer</p>
+                    <p class="desc-produto">Pão triplo, 2 hamburguers, queijo, alface e molho da casa</p>
+                    <div class="opcoes-produto">
+                        <div class="quantidade-produto">
+                            <button class="menos-produto">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                            <span class="quantidade">0</span>
+                            <button class="mais-produto">
+                                <i class="fa-solid fa-angle-up"></i>
+                            </button>
+                        </div>
+                        <div class="adicionar-produto">
+                            <span class="valor-produto">R$22</span>
+                            <button class="carrinho">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
+                    </div>
 
-            <div class="card-produto">
-                <img src="Imagens/Fotos Hamburguer/lanche-3.png" alt="foto-hamburguer">
-                <p class="nome-produto">Caseiro Burguer</p>
-                <p class="desc-produto">Pão, hamburguer 250g, queijo, alface, tomate e molho</p>
-                <div class="opcoes-produto">
-                    <div class="quantidade-produto">
-                        <button class="menos-produto">-</button>
-                        <span class="quantidade">0</span>
-                        <button class="mais-produto">+</button>
-                    </div>
-                    <div class="adicionar-produto">
-                        <span class="valor-produto">R$15</span>
-                        <button class="carrinho">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                    </div>
                 </div>
 
-            </div>
+                <div class="card-produto">
+                    <img src="Imagens/Fotos Hamburguer/lanche-3.png" alt="foto-hamburguer">
+                    <p class="nome-produto">Caseiro Burguer</p>
+                    <p class="desc-produto">Pão, hamburguer 250g, queijo, alface, tomate e molho</p>
+                    <div class="opcoes-produto">
+                        <div class="quantidade-produto">
+                            <button class="menos-produto">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                            <span class="quantidade">0</span>
+                            <button class="mais-produto">
+                                <i class="fa-solid fa-angle-up"></i>
+                            </button>
+                        </div>
+                        <div class="adicionar-produto">
+                            <span class="valor-produto">R$15</span>
+                            <button class="carrinho">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
+                    </div>
 
-            <div class="card-produto">
-                <img src="Imagens/Fotos Hamburguer/lanche-4.png" alt="foto-hamburguer">
-                <p class="nome-produto">Especial Burguer</p>
-                <p class="desc-produto">Pão, hamburguer, queijo, alface duplo, tomate e cebola</p>
-                <div class="opcoes-produto">
-                    <div class="quantidade-produto">
-                        <button class="menos-produto">-</button>
-                        <span class="quantidade">0</span>
-                        <button class="mais-produto">+</button>
-                    </div>
-                    <div class="adicionar-produto">
-                        <span class="valor-produto">R$20</span>
-                        <button class="carrinho">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                    </div>
                 </div>
 
-            </div>
+                <div class="card-produto">
+                    <img src="Imagens/Fotos Hamburguer/lanche-4.png" alt="foto-hamburguer">
+                    <p class="nome-produto">Especial Burguer</p>
+                    <p class="desc-produto">Pão, hamburguer, queijo, alface duplo, tomate e cebola</p>
+                    <div class="opcoes-produto">
+                        <div class="quantidade-produto">
+                            <button class="menos-produto">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                            <span class="quantidade">0</span>
+                            <button class="mais-produto">
+                                <i class="fa-solid fa-angle-up"></i>
+                            </button>
+                        </div>
+                        <div class="adicionar-produto">
+                            <span class="valor-produto">R$20</span>
+                            <button class="carrinho">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
+                    </div>
 
-            <div class="card-produto">
-                <img src="Imagens/Fotos Hamburguer/lanche-5.png" alt="foto-hamburguer">
-                <p class="nome-produto">Combo X-Tudo</p>
-                <p class="desc-produto">1 Gigante burguer + batata frita + Refil de refrigerante</p>
-                <div class="opcoes-produto">
-                    <div class="quantidade-produto">
-                        <button class="menos-produto">-</button>
-                        <span class="quantidade">0</span>
-                        <button class="mais-produto">+</button>
-                    </div>
-                    <div class="adicionar-produto">
-                        <span class="valor-produto">R$30</span>
-                        <button class="carrinho">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                    </div>
                 </div>
 
-            </div>
+                <div class="card-produto">
+                    <img src="Imagens/Fotos Hamburguer/lanche-5.png" alt="foto-hamburguer">
+                    <p class="nome-produto">Combo X-Tudo</p>
+                    <p class="desc-produto">1 Gigante burguer + batata frita + Refil de refrigerante</p>
+                    <div class="opcoes-produto">
+                        <div class="quantidade-produto">
+                            <button class="menos-produto">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                            <span class="quantidade">0</span>
+                            <button class="mais-produto">
+                                <i class="fa-solid fa-angle-up"></i>
+                            </button>
+                        </div>
+                        <div class="adicionar-produto">
+                            <span class="valor-produto">R$30</span>
+                            <button class="carrinho">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
+                    </div>
 
-            <div class="card-produto">
-                <img src="Imagens/Fotos Hamburguer/lanche-6.png" alt="foto-hamburguer">
-                <p class="nome-produto">X-Burguer Bacon</p>
-                <p class="desc-produto">Pão, hamburguer, queijo, alface, tomate, bacon e molho</p>
-                <div class="opcoes-produto">
-                    <div class="quantidade-produto">
-                        <button class="menos-produto">-</button>
-                        <span class="quantidade">0</span>
-                        <button class="mais-produto">+</button>
+                </div>
+
+                <div class="card-produto">
+                    <img src="Imagens/Fotos Hamburguer/lanche-6.png" alt="foto-hamburguer">
+                    <p class="nome-produto">X-Burguer Bacon</p>
+                    <p class="desc-produto">Pão, hamburguer, queijo, alface, tomate, bacon e molho</p>
+                    <div class="opcoes-produto">
+                        <div class="quantidade-produto">
+                            <button class="menos-produto">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                            <span class="quantidade">0</span>
+                            <button class="mais-produto">
+                                <i class="fa-solid fa-angle-up"></i>
+                            </button>
+                        </div>
+                        <div class="adicionar-produto">
+                            <span class="valor-produto">R$24</span>
+                            <button class="carrinho">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="adicionar-produto">
-                        <span class="valor-produto">R$24</span>
-                        <button class="carrinho">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                    </div>
+
                 </div>
 
             </div>
 
         </div>
-
-        <div class="compras">
-            <div class="lista-pedido">
-                <p>Aqui aparecerá o seu <span>Pedido</span></p>
-            </div>
-
-            <div class="lista-compras">
-                <table>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Valor</th>
-                        <th>Quantiade</th>
-                        <th>Total</th>
-                        <th>Excluir</th>
-                    </tr>
-                    <tr>
-                        <td>Dublo X-Burguer</td>
-                        <td>R$ 16,00</td>
-                        <td>4x</td>
-                        <td>R$ 64,00</td>
-                        <td><i class="fa-solid fa-xmark"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Combo X-Tudo</td>
-                        <td>R$ 30,00</td>
-                        <td>2x</td>
-                        <td>R$ 60,00</td>
-                        <td><i class="fa-solid fa-xmark"></i></td>
-                    </tr>
-                </table>
-                <!-- <span>Dublo X-Buguer</span>
-                    <span>R$16.00</span>
-                    <span>4x</span>
-                    <span>Total: R$64.00</span> -->
-            </div>
-        </div>
-
     </div>
 
 

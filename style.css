@@ -8,7 +8,7 @@
 
 :root{
     --background-color: #ffffff;
-    --white-color     : #e8e8e8;
+    --white-color     : #fafafa;
     --red-color       : #F21D2F;
     --orange-color    : #F2600C;
     --grey-color      : #333;
@@ -16,12 +16,19 @@
 
 body {
     background-color: var(--background-color);
+    padding-top: 80px; /* Altura do menu */
 }
 
 header {
     display: flex;
     align-items: center; /* Para centralizar verticalmente os itens */
-    padding: 20px 30px;
+    padding: 15px 30px;
+    box-shadow: 0 10px 5px -10px  rgba(0, 0, 0, 0.145);
+    width: 100%;
+    background-color: var(--background-color);
+
+    position: fixed;
+    top: 0;
 }
 
 ul {
@@ -29,11 +36,98 @@ ul {
     display: flex; 
     margin: 0;
     padding: 0;
+    margin-left: 25px;
 }
 
 li {
-    margin: 0px 20px 0px;
+    margin: 0px 10px 0px;
 }
+
+li:hover{
+    cursor: pointer;
+    color: var(--red-color);
+}
+
+.search-container {
+    position: relative;
+    margin-left: 15px;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    left: 12px; /* Ajuste conforme necessário */
+    top: 50%; /* Centraliza verticalmente o ícone */
+    transform: translateY(-50%); /* Centraliza verticalmente o ícone */
+    pointer-events: none;
+    cursor: pointer;
+    color: var(--red-color);
+}
+
+#search-input {
+    width: 500px;
+    background-color: var(--white-color);
+    border: none;
+    border-radius: 7px;
+    height: 40px;
+    padding: 25px;
+    margin-right: 25px;
+    padding-left: 40px;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0; /*remove as bordas quando for digitar*/
+    outline: 0;
+}
+
+.header-carrinho {
+    display: flex;
+    justify-content: flex-end; /* Alinha os itens à direita */
+    width: 100%;
+}
+
+.carrinho-sacola {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.carrinho-sacola i {
+    margin-right: 8px;
+    font-size: 23px;
+    color: var(--red-color);
+}
+
+.carrinho-sacola p {
+    flex-direction: column;
+    justify-content: flex-end;
+    display: flex;
+}
+
+/* ======= Inicio dos banner ======= */
+
+/* .main-layout {
+    max-width: 1080px;
+} */
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.carousel-container img {
+    width: 600px;
+    margin: 0px 7px;
+    border-radius: 12px;
+}
+
+/* ======= Inicio dos cards ======= */
 
 .container-cards {
     max-width: 650px;
@@ -144,38 +238,3 @@ li {
 }
 
 /* ============================================================== */
-
-.compras {
-    margin-top: 25px;
-}
-
-.lista-pedido p {
-    text-align: center;
-    font-size: larger;
-    font-weight: bolder;
-    font-size: 20px;
-}
-
-.lista-pedido span {
-    color: var(--red-color);
-}
-
-.lista-compras {
-    margin: 25px 0px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-table {
-    flex: 1;
-}
-
-table i{
-    cursor: pointer;
-    color: var(--red-color);
-}
-
-td {
-    padding: 12px 0px;
-}

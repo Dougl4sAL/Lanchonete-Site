@@ -1,6 +1,7 @@
 let mais_produto = document.querySelectorAll('.mais-produto')
 let menos_produto = document.querySelectorAll('.menos-produto')
 let quantidades = Array(mais_produto.length).fill(0); // inicializa o array com zeros
+
 // Cria um array(lista) contendo o valor da quantidade de cada card separado
 let carrinho = document.querySelectorAll('.carrinho')
 
