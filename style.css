@@ -108,7 +108,10 @@ input:focus {
 /* ======= Inicio dos banner ======= */
 
 /* .main-layout {
-    max-width: 1080px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 } */
 
 .margin-top {
@@ -123,15 +126,61 @@ input:focus {
 
 .carousel-container img {
     width: 600px;
+    cursor: pointer;
     margin: 0px 7px;
     border-radius: 12px;
+}
+
+.carousel-container img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+
+/* ======= Inicio das opções ======= */
+
+.opcoes-container {
+    margin: auto;
+    display: flex;
+    width: 1170px;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.opcoes-slide {
+    border-radius: 12px;
+    transition: all .2s linear;    
+}
+
+.opcoes-slide:hover {
+    scale: 1.01;
+    transform: scale(1.02);
+    box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+
+.opcoes-slide button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* faz os nomes ficarem centralizados */
+}
+
+.opcoes-slide img {
+    height: 80px;
+    width: 100px;
+}
+
+.opcoes-slide span {
+    padding: 8px;
+    color: var(--grey-color);
 }
 
 /* ======= Inicio dos cards ======= */
 
 .container-cards {
     max-width: 650px;
-    /* max-width: 1076px */
     margin: auto;
 }
 
