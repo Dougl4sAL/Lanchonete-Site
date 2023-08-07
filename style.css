@@ -3,12 +3,13 @@
     padding: 0;
     font-family: Helvetica;
     box-sizing: border-box;
+    color: var(--grey-color);
     /* Para os filhos nao ultrapassarem o tamanho do pai */
 }
 
 :root{
     --background-color: #ffffff;
-    --white-color     : #fafafa;
+    --white-color     : #f2f2f2;
     --red-color       : #F21D2F;
     --orange-color    : #F2600C;
     --grey-color      : #333;
@@ -22,7 +23,7 @@ body {
 header {
     display: flex;
     align-items: center; /* Para centralizar verticalmente os itens */
-    padding: 15px 30px;
+    padding: 15px 70px;
     box-shadow: 0 10px 5px -10px  rgba(0, 0, 0, 0.145);
     width: 100%;
     background-color: var(--background-color);
@@ -41,6 +42,7 @@ ul {
 
 li {
     margin: 0px 10px 0px;
+    font-weight: 100;
 }
 
 li:hover{
@@ -55,8 +57,8 @@ li:hover{
 
 .fa-magnifying-glass {
     position: absolute;
-    left: 12px; /* Ajuste conforme necessário */
-    top: 50%; /* Centraliza verticalmente o ícone */
+    left: 12px; 
+    top: 50%; 
     transform: translateY(-50%); /* Centraliza verticalmente o ícone */
     pointer-events: none;
     cursor: pointer;
@@ -75,6 +77,7 @@ li:hover{
 }
 
 input:focus {
+    background-color: var(--white-color);
     box-shadow: 0 0 0 0; /*remove as bordas quando for digitar*/
     outline: 0;
 }
@@ -107,13 +110,6 @@ input:focus {
 
 /* ======= Inicio dos banner ======= */
 
-/* .main-layout {
-    max-width: 1200px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-} */
-
 .margin-top {
     margin-top: 20px;
 }
@@ -121,7 +117,7 @@ input:focus {
 .carousel-container {
     display: flex;
     justify-content: center;
-        
+    
 }
 
 .carousel-container img {
@@ -138,10 +134,17 @@ input:focus {
 
 /* ======= Inicio das opções ======= */
 
-.opcoes-container {
+.main-layout {
+    /* Define o tamanho maximo q os itens iram ocupar na pagina */
     margin: auto;
     display: flex;
-    width: 1170px;
+    max-width: 1170px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.opcoes-container {
+    display: flex;
     margin-top: 50px;
     justify-content: space-between;
 }
@@ -151,10 +154,11 @@ input:focus {
     transition: all .2s linear;    
 }
 
-.opcoes-slide:hover {
+.opcoes-slide:hover,
+.card-produto:hover {
     scale: 1.01;
     transform: scale(1.02);
-    box-shadow: 0 2px 8px rgba(0,0,0,.12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .opcoes-slide button {
@@ -174,21 +178,15 @@ input:focus {
 
 .opcoes-slide span {
     padding: 8px;
-    color: var(--grey-color);
 }
 
 /* ======= Inicio dos cards ======= */
-
-.container-cards {
-    max-width: 650px;
-    margin: auto;
-}
 
 .explore-menu{
     font-size: larger;
     font-weight: bolder;
     text-align: center;
-    margin-top: 45px;
+    margin: 30px;
     font-size: 20px;
 }
 
@@ -196,12 +194,28 @@ input:focus {
     color: var(--red-color);
 }
 
+.secao-cardapio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.secao-cardapio hr {
+    flex: 1;
+    border-color: var(--red-color);
+    margin-left: 10px;
+}
+
+.nome-secao {
+    font-weight: bold;
+}
+
 .tudo-card {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-content: center; /* Adicione esta linha */
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
   
@@ -210,13 +224,13 @@ input:focus {
     border-radius: 20px;
 
     width: 210px;
-    margin: 3px;
+    margin-bottom: 25px;
     padding: 10px;
     box-sizing: border-box;
 
     display: flex;
-    flex-direction: column;
     text-align: center;
+    flex-direction: column;
 }
 
 
@@ -284,6 +298,37 @@ input:focus {
     color: var(--red-color);
     font-weight: bolder;
     font-size: small;
+}
+
+.botoes-paginas-container {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin: auto;
+}
+
+.botoes-paginas {
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.botoes-paginas button {
+    border: none;
+    margin: 0 4px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    cursor: pointer;
+    font-weight: bolder;
+    background-color: var(--white-color);
+    color: var(--red-color);
+}
+
+.botoes-paginas button:hover {
+    scale: 1.01;
+    transform: scale(1.02);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.371);
 }
 
 /* ============================================================== */

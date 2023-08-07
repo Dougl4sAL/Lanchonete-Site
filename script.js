@@ -3,7 +3,7 @@ let menos_produto = document.querySelectorAll('.menos-produto')
 let quantidades = Array(mais_produto.length).fill(0); // inicializa o array com zeros
 
 // Cria um array(lista) contendo o valor da quantidade de cada card separado
-let carrinho = document.querySelectorAll('.carrinho')
+let add_carrinho = document.querySelectorAll('.add-carrinho')
 
 // selectorAll cria uma lista com todos os nomes, por isso precisa usar o forEach
 // pra varrer todos e saber qual foi clicado passando o index dele
@@ -25,7 +25,7 @@ menos_produto.forEach((btn, index) => {
     })
 })
 
-carrinho.forEach((btn, index) => {
+add_carrinho.forEach((btn, index) => {
     btn.addEventListener('click', () => {
         let quantidade = document.querySelectorAll('.quantidade')[index]
 
