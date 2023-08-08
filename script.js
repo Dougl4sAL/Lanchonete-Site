@@ -2,14 +2,13 @@ let mais_produto = document.querySelectorAll('.mais-produto')
 let menos_produto = document.querySelectorAll('.menos-produto')
 let quantidades = Array(mais_produto.length).fill(0); // inicializa o array com zeros
 let valores_produtos = document.querySelectorAll('.valor-produto')
+let valor_total = document.querySelector('.valor-total')
+let total_itens = document.querySelector('.total-itens')
 
 // Cria um array(lista) contendo o valor da quantidade de cada card separado
 let add_carrinho = document.querySelectorAll('.add-carrinho')
 
 let carrinho = []
-
-let valor_total = document.querySelector('.valor-total')
-let total_itens = document.querySelector('.total-itens')
 
 valor_total.addEventListener('click', add_valor_total_carrinho)
 
