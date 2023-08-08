@@ -6,19 +6,20 @@ let valores_produtos = document.querySelectorAll('.valor-produto')
 // Cria um array(lista) contendo o valor da quantidade de cada card separado
 let add_carrinho = document.querySelectorAll('.add-carrinho')
 
+let carrinho = []
+
 let valor_total = document.querySelector('.valor-total')
 let total_itens = document.querySelector('.total-itens')
 
 valor_total.addEventListener('click', add_valor_total_carrinho)
 
 function add_valor_total_carrinho(quantidade, valor) {
-    console.log(`adicionou x${quantidade} no valor de ${valor}`);
-    let valorAtual = parseFloat(valor_total.innerText.replace('R$', ''));
-    let itensAtuais = parseInt(total_itens.innerText);
 
-    valor_total.innerText = `R$ ${(valorAtual + quantidade * valor).toFixed(2)}`;
-    total_itens.innerText = `${itensAtuais + quantidade} itens`;
+    let valorAtual = parseFloat(valor_total.innerText.replace('R$', ''))
+    let itensAtuais = parseInt(total_itens.innerText)
 
+    valor_total.innerText = `R$ ${(valorAtual + quantidade * valor).toFixed(2)}`
+    total_itens.innerText = `${itensAtuais + quantidade} itens`
 }
 
 // selectorAll cria uma lista com todos os nomes, por isso precisa usar o forEach
@@ -43,12 +44,25 @@ menos_produto.forEach((btn, index) => {
 
 add_carrinho.forEach((btn, index) => {
     btn.addEventListener('click', () => {
-        let quantidade = quantidades[index];  // quantidade do produto
-        let valor = parseFloat(valores_produtos[index].innerText.replace('R$', '')); // valor do produto
+        let quantidade = quantidades[index]
+        if (quantidade > 0) {
 
-        add_valor_total_carrinho(quantidade, valor);
+            let nome = document.querySelectorAll('.nome-produto')[index].innerText
+            let valor = parseFloat(valores_produtos[index].innerText.replace('R$', '')) // valor do produto
 
-        quantidades[index] = 0;
-        document.querySelectorAll('.quantidade')[index].innerText = '0'; // reset the displayed quantity
+            let produto = {
+                nome      : nome,
+                quantidade: quantidade,
+                valor     : valor,
+            };
+
+            carrinho.push(produto)
+            // console.log(`O nome: ${carrinho[0].nome}, a quantidade: ${carrinho[0].quantidade} e o valor: ${carrinho[0].valor}`)
+
+            add_valor_total_carrinho(quantidade, valor)
+
+            quantidades[index] = 0
+            document.querySelectorAll('.quantidade')[index].innerText = '0' // Reseta o valor exibido na tela
+        }
     });
 });

@@ -89,6 +89,10 @@ input:focus {
     width: 100%;
 }
 
+.header-carrinho a {
+    text-decoration: none;
+}
+
 .carrinho-sacola {
     display: flex;
     align-items: center;
