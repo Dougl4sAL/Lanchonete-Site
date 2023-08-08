@@ -28,6 +28,7 @@ header {
     width: 100%;
     background-color: var(--background-color);
 
+    z-index: 1; /*Para deixar a navbar em frente a  todos os outros elementos*/
     position: fixed;
     top: 0;
 }
@@ -102,7 +103,7 @@ input:focus {
     color: var(--red-color);
 }
 
-.carrinho-sacola p {
+.carrinho-sacola span {
     flex-direction: column;
     justify-content: flex-end;
     display: flex;
