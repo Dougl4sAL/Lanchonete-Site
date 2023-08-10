@@ -1,0 +1,8 @@
+.info-header {
+    /* Define o tamanho maximo q os itens iram ocupar na pagina */
+    margin: auto;
+    display: flex;
+    max-width: 1170px;
+    flex-direction: column;
+    justify-content: space-between;
+}
