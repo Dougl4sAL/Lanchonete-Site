@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lanchonete Rápida</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -14,41 +15,7 @@
 </head>
 
 <body>
-    <div>
-        <header>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/images/logo/ifood-logo.png" width="44.22" height="23.73" alt="Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li>Inicio</li>
-                    <li>Restaurantes</li>
-                    <li>Mercados</li>
-                    <li>Bebidas</li>
-                    <li>Farmácias</li>
-                </ul>
-            </nav>
-            <div class="search-container">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="search" name="search-input" id="search-input" placeholder="Busque por item ou loja">
-            </div>
-
-            <div class="header-carrinho">
-                <a href="pages/carrinho.html">
-                    <button class="carrinho-sacola">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <p>
-                            <span class="valor-total">R$ 0,00</span>
-                            <span class="total-itens">0 itens</span>
-                        </p>
-                    </button>
-                </a>
-            </div>
-
-        </header>
-    </div>
+    <div id="navbar-placeholder"></div>
 
     <div class="main-layout">
 
@@ -395,6 +362,7 @@
         </div>
     </div>
 
+    <script src="/assets/js/loadNavbar.js"></script>
     <script src="script.js"></script>
 </body>
 

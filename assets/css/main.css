@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    box-sizing: border-box;
+    color: var(--grey-color);
+    /* Para os filhos nao ultrapassarem o tamanho do pai */
+}
+
+:root{
+    --background-color: #ffffff;
+    --white-color     : #f2f2f2;
+    --red-color       : #F21D2F;
+    --orange-color    : #F2600C;
+    --grey-color      : #333;
+}
