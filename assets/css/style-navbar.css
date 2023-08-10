@@ -1,9 +1,8 @@
 body {
-    background-color: var(--background-color);
     padding-top: 80px; /* Altura do menu */
 }
 
-header {
+.navbar-container {
     display: flex;
     align-items: center; /* Para centralizar verticalmente os itens */
     padding: 15px 70px;

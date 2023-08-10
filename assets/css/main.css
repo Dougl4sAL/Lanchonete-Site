@@ -7,6 +7,10 @@
     /* Para os filhos nao ultrapassarem o tamanho do pai */
 }
 
+body {
+    background-color: var(--background-color);
+}
+
 :root{
     --background-color: #ffffff;
     --white-color     : #f2f2f2;
