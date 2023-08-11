@@ -1,25 +1,26 @@
+export let carrinho = []
+
 let mais_produto = document.querySelectorAll('.mais-produto')
 let menos_produto = document.querySelectorAll('.menos-produto')
 let quantidades = Array(mais_produto.length).fill(0); // inicializa o array com zeros
 let valores_produtos = document.querySelectorAll('.valor-produto')
-let valor_total = document.querySelector('.valor-total')
-let total_itens = document.querySelector('.total-itens')
+
+// let valor_total = document.querySelector('.valor-total')
+// let total_itens = document.querySelector('.total-itens')
 
 // Cria um array(lista) contendo o valor da quantidade de cada card separado
 let add_carrinho = document.querySelectorAll('.add-carrinho')
 
-let carrinho = []
+// let carrinho = []
 
-valor_total.addEventListener('click', add_valor_total_carrinho)
+// function add_valor_total_carrinho(quantidade, valor) {
 
-function add_valor_total_carrinho(quantidade, valor) {
+//     let valorAtual = parseFloat(valor_total.innerText.replace('R$', ''))
+//     let itensAtuais = parseInt(total_itens.innerText)
 
-    let valorAtual = parseFloat(valor_total.innerText.replace('R$', ''))
-    let itensAtuais = parseInt(total_itens.innerText)
-
-    valor_total.innerText = `R$ ${(valorAtual + quantidade * valor).toFixed(2)}`
-    total_itens.innerText = `${itensAtuais + quantidade} itens`
-}
+//     valor_total.innerText = `R$ ${(valorAtual + quantidade * valor).toFixed(2)}`
+//     total_itens.innerText = `${itensAtuais + quantidade} itens`
+// }
 
 // selectorAll cria uma lista com todos os nomes, por isso precisa usar o forEach
 // pra varrer todos e saber qual foi clicado passando o index dele
@@ -57,11 +58,13 @@ add_carrinho.forEach((btn, index) => {
                 quantidade : quantidade,
                 valor      : valor,
                 valor_total: valor_total
-            };
+            }
 
             carrinho.push(produto)
-            // console.log(`O nome: ${carrinho[0].nome}, a quantidade: ${carrinho[0].quantidade} e o valor: ${carrinho[0].valor}`)
-            add_valor_total_carrinho(quantidade, valor)
+            console.log(carrinho)
+            // Precisa corrigir. Não esta sendo chamado pq não ta encontrando o .valor-total e o outro para proseguir
+
+            // add_valor_total_carrinho(quantidade, valor)
 
             quantidades[index] = 0
             document.querySelectorAll('.quantidade')[index].innerText = '0' // Reseta o valor exibido na tela

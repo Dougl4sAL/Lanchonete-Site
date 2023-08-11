@@ -1,6 +1,9 @@
+import { carrinho } from "./script.js"
+
 let tabela = document.querySelector('.itens-tabela')
 
 function criarItensTabela() {
+    console.log(carrinho)
 
     let linha_tabela = document.createElement('tr')
     linha_tabela.classList.add('itens-compras')
@@ -33,7 +36,5 @@ function criarItensTabela() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  
     criarItensTabela()
-  
-  });
+})
