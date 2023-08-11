@@ -22,7 +22,7 @@
             <div class="margin-top"></div>
 
             <div class="itens-container">
-                <table class="itens-desc">
+                <table class="itens-tabela">
                     <thead> <!--Semanticamente correto-->
                         <tr>
                             <th>Produto</th>
@@ -51,25 +51,36 @@
                             <td><i class="fa-solid fa-xmark"></i></td>
                         </tr>
                         <tr class="itens-compras">
-                            <td><img src="/assets/images/Fotos Hamburguer/lanche-2.png" alt=""></td>
-                            <td>Mega Burguer</td>
+                            <td><img src="/assets/images/Fotos Hamburguer/lanche-1.png" alt=""></td>
+                            <td>Dublo X-Burguer</td>
                             <td>R$ 22,00</td>
-                            <td>x3</td>
-                            <td>R$ 66,00</td>
+                            <td>x2</td>
+                            <td>R$ 44,00</td>
                             <td><i class="fa-solid fa-xmark"></i></td>
-                        </tr>
+                        </tr>                        
                     </tbody>
+                    <tr class="itens-compras">
+                        <td><img src="/assets/images/Fotos Hamburguer/lanche-2.png" alt=""></td>
+                        <td>Mega Burguer</td>
+                        <td>R$ 22,00</td>
+                        <td>x3</td>
+                        <td>R$ 66,00</td>
+                        <td><i class="fa-solid fa-xmark"></i></td>
+                    </tr> 
                 </table>
             </div>
         </header>
 
         <div class="finalizar-container">
             <div class="finalizar-cupom">
-                <input type="text" name="cupom-desconto" id="cupom-desconto" placeholder="Digite um cupom">
+                <i class="fa-solid fa-tags"></i>
+                <input type="text" name="cupom-desconto" id="cupom-desconto"
+                placeholder="Digite um cupom">
             </div>
             <div class="finalizar-info">
                 <span>Total da compra: </span>
                 <span>R$ 176,00</span>
+                <p>Frete grátis para sua região</p>
             </div>
             <div class="finalizar-button">
                 <button>
@@ -81,6 +92,7 @@
 
     </div>
 
+    <script src="/assets/js/ItensCarrinho.js"></script>
     <script src="/assets/js/loadNavbar.js"></script>
 </body>
 
