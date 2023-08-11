@@ -47,7 +47,7 @@ add_carrinho.forEach((btn, index) => {
         if (quantidade > 0) {
 
             let img = document.querySelectorAll('.card-produto img')[index].src
-            let nome = document.querySelectorAll('.nome-produto')[index].innerText
+            let nome = document.querySelectorAll('.nome-produto')[index].innerText            
             let valor = parseFloat(valores_produtos[index].innerText.replace('R$', '')) // valor do produto
             let valor_total = valor * quantidade
 

@@ -1,11 +1,10 @@
 .search-container {
     display: none;
 }
-/* Tentar aumentar a grossura (eixo y) da navbar para o tamanho 45px */
-.navbar-container {
-    padding-top: 100px;
-}
 
+.navbar-container li {
+    padding: 15px 0;
+}
 
 .margin-top {
     margin-top: 30px;
@@ -15,12 +14,6 @@
 .main-layout {
     margin: auto;
     max-width: 1170px;
-}
-
-.itens-header {
-    width: 100%;
-    display: flex;
-    align-content: center;
 }
 
 .itens-desc {
@@ -46,4 +39,60 @@
 .itens-compras img {
     width: 100px;
     mix-blend-mode: multiply;
+}
+
+.itens-compras td>i:last-child {
+    color: var(--red-color);
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.itens-compras td>i:last-child:hover {
+    background-color: var(--white-color);
+}
+
+/* ======= Comecço da finalização ======= */
+
+.finalizar-container {
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.finalizar-cupom {
+    justify-content: start;
+}
+
+.finalizar-info {
+    font-weight: bolder;
+    margin-right: 40px;
+}
+
+.finalizar-button button {
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 9px;
+    border-radius: 7px;
+    padding: 20px 40px;
+    font-weight: bolder;
+    background-color: var(--red-color);
+}
+
+.finalizar-button i {
+    color: var(--white-color);
+    margin-right: 10px;
+}
+
+.finalizar-button span {
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+.finalizar-button button:hover {
+    transform: scale(1.005);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
