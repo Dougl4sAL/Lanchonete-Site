@@ -27,12 +27,16 @@ body {
     margin-left: 25px;
 }
 
+.links-navbar a {
+    text-decoration: none;
+}
+
 .links-navbar li {
     margin: 0px 10px 0px;
     font-weight: 100;
 }
 
-.links-navbar li:hover{
+.links-navbar a:hover{
     cursor: pointer;
     color: var(--red-color);
 }

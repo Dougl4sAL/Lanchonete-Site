@@ -1,5 +1,3 @@
-export let carrinho = []
-
 let mais_produto = document.querySelectorAll('.mais-produto')
 let menos_produto = document.querySelectorAll('.menos-produto')
 let quantidades = Array(mais_produto.length).fill(0); // inicializa o array com zeros
@@ -50,7 +48,10 @@ add_carrinho.forEach((btn, index) => {
             let img = document.querySelectorAll('.card-produto img')[index].src
             let nome = document.querySelectorAll('.nome-produto')[index].innerText            
             let valor = parseFloat(valores_produtos[index].innerText.replace('R$', '')) // valor do produto
-            let valor_total = valor * quantidade
+            let valor_total = Number(valor * quantidade)
+
+            // Pega todos o itens do carrinho para não perder os antigos antes de colocar novos
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || []
 
             let produto = {
                 img        : img,
@@ -61,13 +62,13 @@ add_carrinho.forEach((btn, index) => {
             }
 
             carrinho.push(produto)
+            localStorage.setItem('carrinho', JSON.stringify(carrinho))
             console.log(carrinho)
-            // Precisa corrigir. Não esta sendo chamado pq não ta encontrando o .valor-total e o outro para proseguir
-
+            
             // add_valor_total_carrinho(quantidade, valor)
-
+            
             quantidades[index] = 0
             document.querySelectorAll('.quantidade')[index].innerText = '0' // Reseta o valor exibido na tela
         }
-    });
-});
+    })
+})
