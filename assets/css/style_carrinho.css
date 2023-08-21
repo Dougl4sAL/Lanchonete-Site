@@ -39,14 +39,21 @@
     mix-blend-mode: multiply;
 }
 
-.itens-compras td>i:last-child {
-    padding: 7px;
+.itens-compras button {
+    border: none;
     cursor: pointer;
+    background-color: transparent;
     border-radius: 10px;
+}
+
+.itens-compras i {
+    pointer-events: none;
+    scale: 1.3;
+    padding: 8px;
     color: var(--red-color);
 }
 
-.itens-compras td>i:last-child:hover {
+.itens-compras button:hover {
     background-color: var(--white-color);
 }
 

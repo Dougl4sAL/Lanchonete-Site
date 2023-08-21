@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return response.text()
     })
     .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
-    });
-});
+        document.getElementById('navbar-placeholder').innerHTML = data
+    })
+
+})

@@ -3,21 +3,23 @@ let menos_produto = document.querySelectorAll('.menos-produto')
 let quantidades = Array(mais_produto.length).fill(0); // inicializa o array com zeros
 let valores_produtos = document.querySelectorAll('.valor-produto')
 
-// let valor_total = document.querySelector('.valor-total')
-// let total_itens = document.querySelector('.total-itens')
-
 // Cria um array(lista) contendo o valor da quantidade de cada card separado
 let add_carrinho = document.querySelectorAll('.add-carrinho')
 
 // let carrinho = []
+let valor_total = document.querySelector('.valor-total')
+let total_itens = document.querySelector('.total-itens')
 
 // function add_valor_total_carrinho(quantidade, valor) {
+//     if(valor_total && total_itens) {
+//         let valorAtual = parseFloat(valor_total.innerText.replace('R$', ''))
+//         let itensAtuais = parseInt(total_itens.innerText)
 
-//     let valorAtual = parseFloat(valor_total.innerText.replace('R$', ''))
-//     let itensAtuais = parseInt(total_itens.innerText)
-
-//     valor_total.innerText = `R$ ${(valorAtual + quantidade * valor).toFixed(2)}`
-//     total_itens.innerText = `${itensAtuais + quantidade} itens`
+//         valor_total.innerText = `R$ ${(valorAtual + quantidade * valor).toFixed(2)}`
+//         total_itens.innerText = `${itensAtuais + quantidade} itens`
+//     } else {
+//         console.error("Os elementos 'valor_total' ou 'total_itens' não foram encontrados.")
+//     }
 // }
 
 // selectorAll cria uma lista com todos os nomes, por isso precisa usar o forEach
