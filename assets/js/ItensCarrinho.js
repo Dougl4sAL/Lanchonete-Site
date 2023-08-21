@@ -1,9 +1,13 @@
 const carrinhoData = JSON.parse(localStorage.getItem('carrinho')) || []
 console.log(carrinhoData)
 
+// Para limpar todo o armazenamento local
+// localStorage.removeItem('carrinho')
+
 let tabela = document.querySelector('.itens-tabela')
 let valor_compra = document.querySelector('.valor-compra')
 let excluir_produto = document.querySelectorAll('.excluir-linha')
+let valor_total_compra = 0
 
 function criarItensTabela() {
     carrinhoData.forEach((item) => {
@@ -42,8 +46,7 @@ function criarItensTabela() {
     })
 }
 
-function valorTotalCompra() {
-    let valor_total_compra = 0
+function valorTotalCompra() {    
     carrinhoData.forEach((item) => {
         valor_total_compra += item.valor_total
     })
@@ -52,15 +55,33 @@ function valorTotalCompra() {
 }
 
 tabela.addEventListener('click', function(event) {
+    // se o evento que disparou contém a class excluir-linha
     if (event.target.classList.contains('excluir-linha')) {
-        console.log('excluiu')
-        // Procura a tr pai do botão excluir q foi clicado e remove
+        
         let tr = event.target.closest('.itens-compras')
+        
         if (tr) {
+            // encontrar item no carrinhoData usando algum identificador, como nome do produto
+            let nomeProduto = tr.querySelector('td:nth-child(2)').innerText
+            
+            let item = carrinhoData.find(item => item.nome === nomeProduto)
+            console.log(item)
+
+            if(item) {
+                valor_total_compra -= item.valor_total
+                let index = carrinhoData.indexOf(item)
+                if (index > -1) {
+                    carrinhoData.splice(index, 1)
+                }
+                console.log(carrinhoData)
+            }    
+            // Att o localStorage depois de remover o produto do array
+            localStorage.setItem('carrinho', JSON.stringify(carrinhoData))
             tr.remove()
         }
     }
 })
+
 
 criarItensTabela()
 valorTotalCompra()
