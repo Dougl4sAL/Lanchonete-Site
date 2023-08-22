@@ -7,6 +7,7 @@ console.log(carrinhoData)
 let tabela = document.querySelector('.itens-tabela')
 let valor_compra = document.querySelector('.valor-compra')
 let excluir_produto = document.querySelectorAll('.excluir-linha')
+let msg_sem_produto = document.querySelector('.msg-sem-produto-container')
 let valor_total_compra = 0
 
 function criarItensTabela() {
@@ -43,6 +44,7 @@ function criarItensTabela() {
         linha_tabela.appendChild(excluir_linha)
 
         tabela.appendChild(linha_tabela)
+        
     })
 }
 
@@ -65,23 +67,40 @@ tabela.addEventListener('click', function(event) {
             let nomeProduto = tr.querySelector('td:nth-child(2)').innerText
             
             let item = carrinhoData.find(item => item.nome === nomeProduto)
-            console.log(item)
 
             if(item) {
                 valor_total_compra -= item.valor_total
+                valor_compra.innerHTML = `R$ ${valor_total_compra}`
                 let index = carrinhoData.indexOf(item)
                 if (index > -1) {
                     carrinhoData.splice(index, 1)
                 }
-                console.log(carrinhoData)
             }    
             // Att o localStorage depois de remover o produto do array
             localStorage.setItem('carrinho', JSON.stringify(carrinhoData))
+            escondeInformacoes()
             tr.remove()
         }
     }
 })
 
+function escondeInformacoes() {
+    // Se carrinhoData for não nulo e tiver pelo menos um item
+    // True e False garante q vai remover e add a classList hide
+    if (carrinhoData && carrinhoData.length > 0) {
+        msg_sem_produto.classList.toggle('hide', true)
+        // Esconde a mensagem "sem produto"
+        tabela.classList.toggle('hide', false)
+        // Mostra a tabela
+    } else {
+        tabela.classList.toggle('hide', true)
+        // Esconde a tabela
+        msg_sem_produto.classList.toggle('hide', false)
+        // Mostra a mensagem "sem produto"
+    }
 
+}
+
+escondeInformacoes()
 criarItensTabela()
 valorTotalCompra()

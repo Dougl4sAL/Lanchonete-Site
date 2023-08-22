@@ -57,6 +57,35 @@
     background-color: var(--white-color);
 }
 
+/* ======= Começo Carrinho vazio ======= */
+
+.msg-sem-produto-container {
+    display: flex;
+    justify-content: center;
+}
+
+.msg-sem-produto {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 500px;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+    background-color: var(--white-color);
+
+}
+
+.msg-sem-produto h3 {
+    color: var(--red-color);
+    font-weight: bolder;
+}
+
+.hide {
+    display: none;
+}
+
 /* ======= Comecço da finalização ======= */
 
 .finalizar-container {
